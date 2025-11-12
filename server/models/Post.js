@@ -66,6 +66,7 @@ const PostSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+<<<<<<< HEAD
 // Create slug from title before saving
 PostSchema.pre('save', function (next) {
   if (!this.isModified('title')) {
@@ -98,3 +99,7 @@ PostSchema.methods.incrementViewCount = function () {
 };
 
 module.exports = mongoose.model('Post', PostSchema); 
+=======
+const Post = mongoose.model("Post", postSchema);
+export default Post;
+>>>>>>> 58c5df8 (Initial commit -MERN WEEK 4)
